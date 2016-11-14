@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<title>UI - 表单演示样例</title>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN STYLES -->
+					<link rel="stylesheet" href="resources/view/css/bootstrap.css">
+						<link rel="stylesheet" href="resources/view/css/font-awesome.css">
+				<link rel="stylesheet" href="resources/view/css/simple-line-icons.css">
+				<link rel="stylesheet" href="resources/view/css/components.css">
+					<link rel="stylesheet" href="resources/view/css/layout.css">
+				<link rel="stylesheet" href="resources/view/css/toastr.css">
+				<link rel="stylesheet" href="resources/view/css/custom.css">
+					<link rel="stylesheet" href="resources/view/css/themes/darkblue.css">
+																											<link rel="stylesheet" href="resources/table/css/bootstrap-datetimepicker.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/all.css">
+				<link rel="stylesheet" href="resources/checkbox/css/icheck/minimal/_all.css">
+				<link rel="stylesheet" href="resources/checkbox/css/icheck/minimal/minimal.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/futurico/futurico.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/polaris/polaris.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/minimal/grey.css">
+								<link rel="stylesheet" href="resources/table/css/select2.css">
+				<link rel="stylesheet" href="resources/table/css/select2-bootstrap.min.css">
+																	<link rel="stylesheet" href="resources/view/css/plugins.css">
+							<link rel="stylesheet" href="resources/view/css/ui.css">
+																																																					<!-- END STYLES -->
+	</head>
+	
+	<!-- END HEAD -->
+	
+	<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+	
+		<div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <div class="page-logo">
+                    <a href="#">
+                        <img src="#" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler glyphicon glyphicon-align-justify"> </div>
+                </div>
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+						<li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                                <img alt="" class="img-circle " src="#" />
+                                <span class="username username-hide-on-mobile"> 
+                                userName                                </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="">
+                                        <i class="icon-lock"></i> Lock Screen </a>
+                                </li>
+                                <li>
+                                    <a href="../../logout">
+                                        <i class="icon-key"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+	
+	
+		<div class="page-container">
+		
+			<div class="page-sidebar-wrapper">
+				<div class="page-sidebar navbar-collapse collapse">
+					<ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+					
+					
+					<li class="sidebar-toggler-wrapper hide">
+                            <div class="sidebar-toggler"> </div>
+                        </li>
+                        
+                        
+                        <li class="sidebar-search-wrapper">
+                            <form class="sidebar-search  " action="#" method="POST">
+                                <a href="javascript:;" class="remove">
+                                    <i class="icon-close"></i>
+                                </a>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <a href="javascript:;" class="btn submit">
+                                            <i class="icon-magnifier"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </form>
+                            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                        </li>
+					
+					
+						                        
+                    </ul>
+				</div>
+			</div>
+		
+        
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                                       <h3 class="page-title"> UI - 表单演示样例
+                                            </h3>
+                                      
+            	 <div class="row">
+ <div class="bunch  col-md-12">
+<span class=" text-default">&#39029;&#38754;&#29983;&#25104;&#26102;&#38388; : 
+</span>
+<span class=" text-danger">2016-07-12 11:27:42</span></div><!-- tabs BEGIN -->
+<div id="$runtime.getAttribute("name")"
+	>
+			
+		
+		
+
+
+
+<ul class="nav nav-tabs">
+						<li id="tb_form-default"class=""><a   data-toggle="tab"  href="#tp_form-default"   >默认格式表单</a>
+							</li>
+								<li id="tb_form-horizontal"class="active "><a   data-toggle="tab"  href="#tp_form-horizontal"   >水平格式表单</a>
+							</li>
+								<li id="tb_form-inline"class=""><a   data-toggle="tab"  href="#tp_form-inline"   >内联格式表单</a>
+							</li>
+			</ul>
+
+
+	<!-- tab-content BEGIN -->
+	<div class="tab-content">
+<div class="tab-pane fade "
+id="tp_form-default"><div class="col-md-6 col-md-offset-1"><form id="form-default" name="form-default" action="/form/default/submit/url" method="post" class="">
+<div class="form-body">
+<input id="userid1" name="userid1" type="hidden" value="1"><div class="form-group">
+<label for="username1" class="control-label">&#29992;&#25143;&#21517;
+</label>
+<input id="username1" name="username1" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#29992;&#25143;&#21517;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="password" class="control-label">&#23494;&#30721;
+</label>
+<input id="password" name="password" type="password" class="form-control" placeholder="&#35831;&#36755;&#20837;&#23494;&#30721;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="email1" class="control-label ">&#37038;&#31665;
+</label><div class="input-group">		<div class="input-group-addon">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</div>
+
+<input id="email1" name="email1" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#24744;&#30340;&#30005;&#23376;&#37038;&#31665;" data-validate="{email:true}">
+</div>
+</div><div class="form-group">
+<label for="email1" class="control-label ">&#36523;&#39640;
+</label><div class="input-group">
+<input id="height1" name="height1" type="text" value="170.00" class="form-control" placeholder="&#35831;&#36755;&#20837;&#36523;&#39640;" data-validate="{required:true,digits:true,min:90}">
+<span class="input-group-addon">cm</span>
+</div>
+</div><div class="form-group">
+<label for="birthday1" class="control-label">&#20986;&#29983;&#26085;&#26399;
+</label>
+<input id="birthday1" name="birthday1" type="text" value="" class="form-control" data-date-format="YYYY-MM-DD" placeholder="&#35831;&#36755;&#20837;&#29983;&#26085;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="time1" class="control-label">&#20986;&#29983;&#26102;&#38388;
+</label>
+<input id="time1" name="time1" type="text" value="" class="form-control" data-date-format="hh:mm:ss" placeholder="&#35831;&#36755;&#20837;&#26102;&#38388;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="sex" class="control-label ">&#24615;&#21035;
+</label><div class="input-group">
+<div class="radio">
+	<label>
+		<input  id="sex_male" name="sex" type="radio" value="male" class="icheck" checked>
+	&#30007;
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+		<input  id="sex_female" name="sex" type="radio" value="female" class="icheck">
+	&#22899;
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+		<input  id="sex_other" name="sex" type="radio" value="other" class="icheck" disabled>
+	&#20854;&#20182;
+	</label>
+</div>
+</div>
+</div><div class="form-group">
+<label for="city1" class="control-label ">&#24744;&#22312;&#37027;&#20010;&#22478;&#24066;&#29983;&#27963;?
+</label><div class="input-group"><span class="input-group-addon">City</span>
+<select id="city1" name="city1" class="form-control select select-primary select-block mbl" placeholder="&#35831;&#36873;&#25321;&#25152;&#22312;&#22478;&#24066;" data-validate="{required:true}">
+	<option></option>
+<optgroup label="&#36797;&#23425;&#30465;
+">
+<option value="0">&#27784;&#38451;
+</option>
+<option value="1">&#22823;&#36830;
+</option>
+</optgroup>
+<option value="2">&#21414;&#38376;
+</option>
+<option value="3">&#28595;&#38376;
+</option>
+<option value="4">&#21335;&#28023;
+</option>
+		</select>
+</div>
+</div><div class="form-group">
+<label for="comment1" class="control-label ">&#22791;&#27880;
+</label><div class="input-icon input-icon-lg">
+ <i class="fa fa-comment"></i>
+
+<input id="comment1" name="comment1" type="text" class="form-control input-lg">
+</div>
+</div><div class="form-group">
+<label for="validate_email" class="control-label">EMAIL
+</label>
+<input id="validate_email" name="validate_email" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#37038;&#31665;&#22320;&#22336;" data-validate="{email:true}">
+</div><div class="form-group">
+<label for="validate_mobile" class="control-label">&#25163;&#26426;&#21495;&#30721;
+</label>
+<input id="validate_mobile" name="validate_mobile" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#25163;&#26426;&#21495;&#30721;" data-validate="{mobile:true}">
+</div><div class="form-group">
+<label for="validate_phone" class="control-label">&#30005;&#35805;&#21495;&#30721;
+</label>
+<input id="validate_phone" name="validate_phone" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#30005;&#35805;&#21495;&#30721;" data-validate="{phone:true}">
+</div><div class="form-group">
+<label for="validate_idcard" class="control-label">&#36523;&#20221;&#35777;&#21495;
+</label>
+<input id="validate_idcard" name="validate_idcard" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#36523;&#20221;&#35777;&#21495;" data-validate="{idcard:true}">
+</div><div class="form-group">
+<label for="validate_postcode" class="control-label">&#37038;&#25919;&#32534;&#30721;
+</label>
+<input id="validate_postcode" name="validate_postcode" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#37038;&#25919;&#32534;&#30721;" data-validate="{postcode:true}">
+</div></div><div class="form-actions">
+
+<input id="submit" name="submit" type="submit" value="&#25552;&#20132;
+" class="btn btn-primary">
+
+<input id="reset" name="reset" type="reset" value="&#37325;&#32622;
+" class="btn btn-default">
+</div>
+</form>
+</div></div><div class="tab-pane fade active in
+"
+id="tp_form-horizontal"><div class="col-md-7 col-md-offset-1"><form id="form-horizontal" name="form-horizontal" action="/form/inline/submit/url" method="post" class=" form-horizontal">
+<div class="form-body">
+<input id="userid2" name="userid2" type="hidden" value="1"><div class="form-group">
+<label for="username2" class="control-label  col-md-2">&#29992;&#25143;&#21517;
+</label>
+<div class="bunch  col-md-4">
+<input id="username2" name="username2" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#29992;&#25143;&#21517;" data-validate="{required:true}">
+</div>
+
+<label for="email2" class="control-label  col-md-2">&#37038;&#31665;
+</label>
+<div class="bunch  col-md-4">
+<input id="email2" name="email2" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#24744;&#30340;&#30005;&#23376;&#37038;&#31665;">
+</div>
+</div><div class="form-group">
+<label for="date1" class="control-label  col-md-2">&#26085;&#26399;
+</label><div class="bunch  col-md-10"><div class="input-inline input-medium">
+<input id="date_b" name="date_b" type="text" value="" class="form-control" data-date-format="YYYY-MM-DD" placeholder="&#35831;&#36755;&#20837;&#36215;&#22987;&#26085;&#26399;" data-validate="{required:true}">
+</div>
+
+<span class=" text-default">-
+</span><div class="input-inline input-medium">
+<input id="date_e" name="date_e" type="text" value="" class="form-control" data-date-format="YYYY-MM-DD" placeholder="&#35831;&#36755;&#20837;&#32467;&#26463;&#26085;&#26399;" data-validate="{required:true}">
+</div>
+</div></div><div class="form-group">
+<label for="sex2" class="control-label  col-md-2">&#24615;&#21035;
+</label><div class="bunch  col-md-10"><div class="input-group">
+<div class="radio-inline">
+	<label>
+		<input  id="sex2_male" name="sex" type="radio" value="male" class="icheck" checked>
+	&#30007;
+	</label>
+</div>
+
+<div class="radio-inline">
+	<label>
+		<input  id="sex2_female" name="sex" type="radio" value="female" class="icheck">
+	&#22899;
+	</label>
+</div>
+
+<div class="radio-inline">
+	<label>
+		<input  id="sex2_other" name="sex" type="radio" value="other" class="icheck">
+	&#20854;&#20182;
+	</label>
+</div>
+</div>
+</div></div><div class="form-group">
+<label for="city2" class="control-label  col-md-2">&#24744;&#22312;&#37027;&#20010;&#22478;&#24066;&#29983;&#27963;?
+</label><div class="bunch  col-md-10"><div class="input-group">		<div class="input-group-addon">
+			<span class="glyphicon glyphicon-road"></span>
+		</div>
+<select id="city2" name="city2" multiple="multiple" class="form-control multiselect multiselect-info" placeholder="&#35831;&#36873;&#25321;&#25152;&#22312;&#22478;&#24066;" data-validate="{required:true}">
+
+<optgroup label="&#36797;&#23425;&#30465;
+">
+<option value="0">&#27784;&#38451;
+</option>
+<option value="1">&#22823;&#36830;
+</option>
+</optgroup>
+<option value="2">&#21414;&#38376;
+</option>
+<option value="3">&#28595;&#38376;
+</option>
+<option value="4">&#21335;&#28023;
+</option>
+		</select>
+</div>
+</div></div><div class="form-group">
+<label for="favorite" class="control-label  col-md-2">&#24744;&#21916;&#27426;&#37027;&#20123;&#27700;&#26524;&#65311;
+</label><div class="bunch  col-md-10">
+<div class="checkbox">
+<label for="favorite1">
+	<input id="favorite1" name="favorite1" type="checkbox" value="banana" class="icheck">
+	&#39321;&#34121;
+</label>
+</div>
+
+<div class="checkbox">
+<label for="favorite2">
+	<input id="favorite2" name="favorite2" type="checkbox" value="apple" class="icheck" data-validate="{required:true}">
+	&#33529;&#26524;
+</label>
+</div>
+
+<div class="checkbox">
+<label for="favorite3">
+	<input id="favorite3" name="favorite3" type="checkbox" value="pear" class="icheck" checked data-validate="{required:true}">
+	&#22823;&#40493;&#26792;
+</label>
+</div>
+
+<div class="checkbox">
+<label for="favorite4">
+	<input id="favorite4" name="favorite4" type="checkbox" value="XXX" class="icheck" disabled>
+	&#26410;&#30693;&#27700;&#26524;
+</label>
+</div>
+</div></div><div class="form-group">
+<label for="introduce" class="control-label  col-md-2">&#33258;&#25105;&#20171;&#32461;
+</label>
+<div class="bunch  col-md-10">
+<textarea id="introduce" name="introduce" class="form-control input-lg"></textarea>
+</div>
+</div></div><div class="form-actions">
+
+<input id="submit" name="submit" type="submit" value="&#25552;&#20132;
+" class="btn btn-primary">
+
+<input id="reset" name="reset" type="reset" value="&#37325;&#32622;
+" class="btn btn-default">
+</div>
+</form>
+</div></div><div class="tab-pane fade "
+id="tp_form-inline"><form id="form-inline" name="form-inline" action="/form/inline/submit/url" method="post" class=" form-inline">
+<div class="form-body">
+<input id="userid" name="userid" type="hidden" value="1"><div class="form-group">
+<label for="username" class="control-label ">&#29992;&#25143;&#21517;
+</label>
+<input id="username" name="username" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#29992;&#25143;&#21517;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="email" class="control-label ">&#37038;&#31665;
+</label>
+<input id="email" name="email" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#24744;&#30340;&#30005;&#23376;&#37038;&#31665;">
+</div><div class="form-group">
+<label for="birthday" class="control-label ">&#29983;&#26085;
+</label>
+<input id="birthday" name="birthday" type="text" value="" class="form-control" data-date-format="YYYY-MM-DD" placeholder="&#35831;&#36755;&#20837;&#29983;&#26085;" data-validate="{required:true}">
+</div></div><div class="form-actions">
+
+<input id="submit" name="submit" type="submit" value="&#25552;&#20132;
+" class="btn btn-primary">
+
+<input id="reset" name="reset" type="reset" value="&#37325;&#32622;
+" class="btn btn-default">
+</div>
+</form>
+</div>			</div><!-- class=content div end -->
+				</div>
+<!-- tab ending -->   	</div>
+   </div>
+  </div>
+</div>
+
+									<!--[if lt IE 9]>
+						<script src="resources/view/js/respond.min.js"></script>
+														<script src="resources/view/js/excanvas.min.js"></script>
+						<![endif]-->
+																	<script src="resources/view/js/jquery.min.js"></script>
+														<script src="resources/view/js/bootstrap.js"></script>
+																																									<script src="resources/view/js/bootbox.js"></script>
+														<script src="resources/view/js/toastr.js"></script>
+														<script src="resources/view/js/ui.js"></script>
+														<script src="resources/view/js/ui.view.js"></script>
+														<script src="resources/table/js/moment.js"></script>
+														<script src="resources/view/js/jquery.slimscroll.js"></script>
+														<script src="resources/view/js/jquery.cokie.min.js"></script>
+														<script src="resources/view/js/bootstrap-hover-dropdown.js"></script>
+														<script src="resources/view/js/jquery.blockui.min.js"></script>
+														<script src="resources/view/js/jquery.uniform.js"></script>
+														<script src="resources/view/js/app.js"></script>
+														<script src="resources/view/js/layout.js"></script>
+														<script src="resources/view/js/quick-sidebar.js"></script>
+														<script src="resources/tabs/js/ui.tabs.js"></script>
+														<script src="resources/tab/js/bootstrap-tabdrop.js"></script>
+														<script src="resources/form/js/jquery.metadata.js"></script>
+														<script src="resources/form/js/jquery.validate.js"></script>
+														<script src="resources/form/js/ui.form.js"></script>
+														<script src="resources/hidden/js/ui.hidden.js"></script>
+														<script src="resources/text/js/ui.text.js"></script>
+														<script src="resources/password/js/ui.password.js"></script>
+														<script src="resources/label/js/ui.label.js"></script>
+														<script src="resources/number/js/ui.number.js"></script>
+																	<script src="resources/table/js/bootstrap-datetimepicker.js"></script>
+														<script src="resources/date/js/ui.date.js"></script>
+																																																								<script src="resources/checkbox/js/icheck.js"></script>
+														<script src="resources/radio/js/ui.radio.js"></script>
+																				<script src="resources/table/js/select2.full.js"></script>
+														<script src="resources/table/js/ui.select.js"></script>
+														<script src="resources/button/js/ui.button.js"></script>
+														<script src="resources/checkbox/js/ui.checkbox.js"></script>
+														<script src="resources/textarea/js/ui.textarea.js"></script>
+						
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+	ui.URL_PREFIX="/";
+	(function(){
+		//user defined functions 
+		
+	
+		function handleOnChange() {
+			ui.info("onchange : "+this.val());
+		}
+		function ready() {
+			ui.checkbox("favorite1").attr("checked",true);
+			ui.checkbox("favorite1").attr("checked",false);
+		}
+	
+			//components init
+		(function(){
+					ui.form("form-default").init();
+ui.text("username1").bind("change",handleOnChange);
+
+ui.password("password").bind("change",handleOnChange);
+
+ui.number("height1").bind("change",handleOnChange);
+
+ui.date("birthday1").init({format:"YYYY-MM-DD"});
+
+ui.date("time1").init({format:"hh:mm:ss"});
+
+ui.radio("sex_male").init({});
+
+ui.radio("sex_female").init({});
+
+ui.radio("sex_other").init({});
+
+ui.select("city1").init({ placeholder:'请选择所在城市',});
+ui.select("city1").bind("change",handleOnChange);
+
+ui.form("form-horizontal").init();
+ui.date("date_b").init({format:"YYYY-MM-DD"});
+
+ui.date("date_e").init({format:"YYYY-MM-DD"});
+
+ui.radio("sex2_male").init({});
+
+ui.radio("sex2_female").init({});
+
+ui.radio("sex2_other").init({});
+
+ui.select("city2").init({ placeholder:'请选择所在城市',});
+
+ui.checkbox("favorite1").init({});
+ui.checkbox("favorite1").bind("change",handleOnChange);
+
+ui.checkbox("favorite2").init({});
+
+ui.checkbox("favorite3").init({});
+
+ui.checkbox("favorite4").init({});
+
+ui.form("form-inline").init();
+ui.date("birthday").init({format:"YYYY-MM-DD"});
+
+				ui.view("form-demo").bind("ready",ready);
+		})();
+	})();
+});
+</script>
+</html>

@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="components-demo" title="UI - 组件演示样例">
+	<panel heading="Buttons Demo">
+		<panel-body>
+			<button name="aaa1" label="链接按钮" href="javascript:void(0);"
+				context="link" layoutconstraint="md:2;sm:2;" sizing="extrasmall"></button>
+			<button name="aaa2" label="按钮" context="default"
+				layoutconstraint="md:2;sm:2;md-offset:1" onClick="testBtnClick"
+				tooltip="已绑定点击事件"></button>
+			<button name="aaa3" label="首要" type="submit" context="primary"
+				layoutconstraint="md:2;sm:2;md-offset:1" sizing="large"></button>
+			<button name="aaa4" label="危险" type="reset" context="danger"
+				layoutconstraint="md:2;sm:2;md-offset:1" sizing="huge" onClick="testBtnClick"></button>
+		</panel-body>
+	</panel>
+
+	<panel heading="Dropdown Demo">
+		<panel-body>
+			<dropdown name="dropdown1" label="正常极小" dropdown="false"
+				layoutconstraint="md-offset:0" split="true" sizing="extrasmall"
+				context="default">
+				<menuitem label="菜单1" />
+				<menuitem label="菜单2" />
+				<separator />
+				<menuitem label="菜单3" />
+			</dropdown>
+			<dropdown name="dropdown4" label="危险小" dropdown="false"
+				layoutconstraint="md-offset:1" split="true" sizing="small" context="danger">
+				<menuitem label="菜单1" />
+				<menuitem label="菜单2" />
+				<separator />
+				<menuitem label="菜单3" />
+			</dropdown>
+			<dropdown name="dropdown2" label="警告一般" dropdown="true"
+				layoutconstraint="md-offset:1" split="false" sizing="default"
+				context="warning">
+				<menuitem label="菜单1" />
+				<menuitem label="菜单2" />
+				<separator />
+				<menuitem label="菜单3" />
+			</dropdown>
+			<dropdown name="dropdown3" label="首要大" dropdown="false"
+				layoutconstraint="md-offset:1" split="true" sizing="large" context="primary">
+				<menuitem label="菜单1" />
+				<menuitem label="菜单2" />
+				<separator />
+				<menuitem label="菜单3" />
+			</dropdown>
+		</panel-body>
+	</panel>
+	<panel heading="Modal Demo">
+		<panel-body>
+			<button label="弹出模态窗口" type="button" name="openModal" onClick="openModalWindow"></button>
+			<modal name="myModal" heading="模态窗口" sizing="large" onShow="testOnShow"
+				onShown="testOnShown" onHide="testOnHide" onHidden="testOnHidden"
+				show="false" keyboard="true">
+				<modal-body>
+					<image shape="thumbnail">
+						<attribute name="src"><![CDATA[http://img6.caijing.com.cn/2016/0617/1466166213767.jpg]]></attribute>
+					</image>
+				</modal-body>
+				<modal-footer>
+					<button label="关闭窗口" type="button" name="closeModal"
+						onClick="closeModalWindow"></button>
+				</modal-footer>
+			</modal>
+		</panel-body>
+	</panel>
+	<panel heading="Table Demo （dbclik to edit row）">
+		<panel-body>
+			<table name="tabledemo1" showrownum="true" scroll="false" onSelectRow="testTableSelectRow"
+				editurl="/a/b" multiselect="true" showpager="true">
+				<column label="序号" name="id" key="true" hidden="true"></column>
+				<column label="名称" name="name" sortable="true" editable="true"></column>
+				<column label="日期" name="date" sortable="true" editable="true"></column>
+				<column label="性别" name="sex" sortable="true" editable="true"></column>
+				<column label="地址" name="addres" sortable="true" editable="true"></column>
+				<column label="操作" formatter="testFormater">
+				</column>
+				<subtable scroll="true" height="300" editurl="/sub/a/b">
+					<column label="序号" name="id" key="true" hidden="true"></column>
+					<column label="名称" name="name" sortable="true" editable="true"></column>
+					<column label="日期" name="date" sortable="true" editable="true"></column>
+					<column label="性别" name="sex" sortable="true" editable="true"></column>
+					<column label="地址" name="addres" sortable="true" editable="true"></column>
+					<attribute name="data">
+			<![CDATA[
+				[
+					{id: "1", name: "大兵1", date: "2016年5月25日", sex: "男", addres: "沈阳市和平区"},
+					{id: "2", name: "大兵2", date: "2016年5月26日", sex: "女", addres: "沈阳市和平区"},
+					{id: "3", name: "大兵3", date: "2016年5月27日", sex: "男", addres: "沈阳市和平区"},
+					{id: "4", name: "大兵4", date: "2016年5月28日", sex: "女", addres: "沈阳市和平区"},
+					{id: "5", name: "大兵5", date: "2016年5月29日", sex: "男", addres: "沈阳市和平区"},
+					{id: "6", name: "大兵6", date: "2016年5月30日", sex: "女", addres: "沈阳市和平区"},
+					{id: "7", name: "大兵7", date: "2016年5月1日", sex: "男", addres: "沈阳市和平区"},
+					{id: "8", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "9", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "10", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "11", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "12", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "13", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "14", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "15", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "16", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "17", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "18", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "19", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "20", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "21", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "22", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "23", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "24", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "25", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "26", name: "大兵9", date: "2016年5月3日", sex: "男", addres: "沈阳市和平区"}
+					
+				]
+			]]>
+				</attribute>
+				</subtable>
+				<attribute name="data">
+			<![CDATA[
+				[
+					{id: "1", name: "大兵1", date: "2016年5月25日", sex: "男", addres: "沈阳市和平区"},
+					{id: "2", name: "大兵2", date: "2016年5月26日", sex: "女", addres: "沈阳市和平区"},
+					{id: "3", name: "大兵3", date: "2016年5月27日", sex: "男", addres: "沈阳市和平区"},
+					{id: "4", name: "大兵4", date: "2016年5月28日", sex: "女", addres: "沈阳市和平区"},
+					{id: "5", name: "大兵5", date: "2016年5月29日", sex: "男", addres: "沈阳市和平区"},
+					{id: "6", name: "大兵6", date: "2016年5月30日", sex: "女", addres: "沈阳市和平区"},
+					{id: "7", name: "大兵7", date: "2016年5月1日", sex: "男", addres: "沈阳市和平区"},
+					{id: "8", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "9", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "10", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "11", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "12", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "13", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "14", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "15", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "16", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "17", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "18", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "19", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "20", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "21", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "22", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "23", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "24", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "25", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "26", name: "大兵9", date: "2016年5月3日", sex: "男", addres: "沈阳市和平区"}
+					
+				]
+			]]>
+				</attribute>
+				<table-actions>
+					<button name="addrow" label="add row" onclick="addrow"
+						tooltip="点击-在表首增加一行"></button>
+					<button name="removerow" label="remove row" onclick="removerow"
+						tooltip="点击-删除选中的第一行"></button>
+					<button name="editrow" label="edit row" onclick="editrow"
+						tooltip="点击-编辑选中的第一行"></button>
+					<button name="saverow" label="save row" onclick="saverow"
+						tooltip="点击-保存通过【edit row】按钮进行编辑的行"></button>
+					<button name="restorerow" label="restore row" onclick="restorerow"
+						tooltip="点击-取消通过【edit row】按钮进行编辑的编辑状态"></button>
+				</table-actions>
+			</table>
+			</panel-body>
+	</panel>
+	<panel heading="Tabs Demo">
+		<panel-body>
+			<button name="showbtn" label="显示 tab7" type="button" onClick="showit"/>
+			<button name="contentbtn" label="显示第一个tab" type="button" onClick="showFirstTab"/>
+			<!-- <button name="hidebtn" label="hide tab7" type="button" onClick="hideit"
+				context="primary" />
+				 -->
+			<button name="disbtn" label="禁用 tab7" type="button" onClick="disableit"/>
+			<button name="enabtn" label="启用 tab7" type="button" onClick="enableit"/>
+			<button name="lablebtn" label="设置 tab7 标签" type="button" onClick="setlable"/>
+			<button name="contentbtn" label="设置 tab7 内容" type="button" onClick="setcontent"/>
+			<!-- <button name="shownbtn" label="shown tab7" type="button" onClick="shown"/>
+			<button name="hidenbtn" label="hiden tab7" type="button" onClick="hiden"/>
+				 -->
+			<tabs name="tab1" onShow="onshow" onShown="onshown" onHide="onhide"
+				onHidden="onhidden">
+				<tab-nav position="top" tabdrop="true">
+					<tab name="tab1" label="Home"/>
+					<tab name="tab2" label="Profile" />
+					<tab name="tab3" label="Others" />
+					<tab name="tab4" label="tab4" />
+					<tab name="tab5" label="tab5" />
+					<tab name="tab6" label="tab6" />
+					<tab name="tab7" label="tab7" />
+					<tab name="tab8" label="tab8" />
+					<tab name="tab9" label="tab9">
+						<dropdown>
+							<menuitem name="tab11" label="tab11" />
+							<menuitem name="tab12" label="tab12" />
+							<menuitem name="tab13" label="tab13" />
+						</dropdown>
+					</tab>
+				</tab-nav>
+				<tab-content name="tab1">
+					<form name="form-default" action="/form/default/submit/url"
+				method="post">
+				<form-body>
+					<hidden name="userid1" value="1" />
+					<form-group>
+						<text name="username1" label="用户名" placeholder="请输入用户名" validate="{required:true}" />
+					</form-group>
+					<form-group>
+						<password name="password" label="密码" placeholder="请输入密码" validate="{required:true}" />
+					</form-group>
+					<form-group>
+						<label for="email1" text="邮箱"/>
+						<input-group>
+							<input-group-addon icon="envelope"/>
+							<text name="email1" placeholder="请输入您的电子邮箱" />
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="email1" text="身高"/>
+						<input-group>
+						 	<number name="height1" placeholder="请输入身高" readonly="false" value="190" format="###,###.00" validate="{required:true,digits:true,min:90}" bind="user.height" />
+						 	<input-group-addon text="cm" ></input-group-addon>	
+						 </input-group>
+					</form-group>
+					<form-group>
+						<date name="birthday1" label="出生日期" placeholder="请输入生日" validate="{required:true}" format="YYYY-MM-DD"/>
+					</form-group>
+					<form-group>
+						<date name="time1" label="出生时间" placeholder="请输入时间" validate="{required:true}" format="hh:mm:ss"/>
+					</form-group>
+					<form-group>
+						<label for="sex" text="性别"/>
+						<input-group>
+							<radio name="sex" label="男" value="male" checked="false" bind="user.sex"/>
+							<radio name="sex" label="女" value="female" checked="false"
+								bind="user.sex"/>
+							<radio name="sex" label="其他" value="other" bind="user.sex"/>
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="city1" text="您在那个城市生活?"/>
+						<input-group>
+							<input-group-addon text="City"/>
+							<select name="city1" placeholder="请选择所在城市" validate="{required:true}" bind="user.city" multiple="true">
+								<optgroup label="辽宁省">
+									<option value="0" label="沈阳" />
+									<option value="1" label="大连" />
+								</optgroup>
+								<option value="2" label="厦门" />
+								<option value="3" label="澳门" />
+								<option value="4" label="南海" />
+							</select>
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="comment1" text="备注"/>
+						<input-icon right="false" icon="comment" sizing="large">
+							<text name="comment1" sizing="large"/>
+						</input-icon>
+					</form-group>
+				</form-body>
+				<form-actions>
+					<button name="submit" label="提交" type="submit" context="primary" />
+					<button name="reset" label="重置" type="reset" />
+				</form-actions>
+			</form>
+				</tab-content>
+				<tab-content name="tab2">
+					<form name="form-default" action="/form/default/submit/url"
+						method="post">
+						<form-body>
+							<hidden name="userid1" value="1" />
+							<form-group>
+								<text name="username1" label="用户名2" placeholder="请输入用户名"
+									validate="{required:true}" />
+							</form-group>
+						</form-body>
+					</form>
+				</tab-content>
+				<tab-content name="tab3">
+					<plaintext text="标签面板内容3" />
+				</tab-content>
+				<tab-content name="tab4">
+					<plaintext text="标签面板内容4 : " />
+					
+				</tab-content>
+				<tab-content name="tab5">
+					<plaintext text="标签面板内容5 : " />
+				</tab-content>
+				<tab-content name="tab6">
+					<plaintext text="标签面板内容6 : " />
+				</tab-content>
+				<tab-content name="tab7">
+					<plaintext text="标签面板内容7: " />
+				</tab-content>
+				<tab-content name="tab8">
+					<plaintext text="标签面板内容8: " />
+				</tab-content>
+				<tab-content name="tab9">
+					<plaintext text="标签面板内容9 : " />
+				</tab-content>
+				<tab-content name="tab11">
+					<plaintext text="标签面板内容 11: " />
+				</tab-content>
+				<tab-content name="tab12">
+					<plaintext text="标签面板内容 12: " />
+				</tab-content>
+				<tab-content name="tab13">
+					<plaintext text="标签面板内容 13: " />
+				</tab-content>
+			</tabs>
+		</panel-body>
+	</panel>
+	<panel heading="Progressbar Demo">
+		<panel-body>
+		
+		<button name="btn_reset" label="Reset" type="button" onClick="reset"/>
+		<button name="btn_20" label="完成20%" type="button" onClick="update20"/>
+		<button name="btn_50" label="完成30%" type="button" onClick="update50"/>
+		<button name="btn_70" label="完成10%" type="button" onClick="update70"/>
+		<button name="btn_finish" label="Finish" type="button" onClick="finish"/>
+		<progressbar name="downloading" label="已完成" showLabel="true" percent="20" sizing="small"/>
+		
+		<button name="btn_p1" label="p1调整" type="button" onClick="p1update10"/>
+		<button name="btn_p2" label="p2调整" type="button" onClick="p2update10"/>
+		<button name="btn_p3" label="p3调整" type="button" onClick="p3update10"/>
+		<button name="btn_p4" label="p4调整" type="button" onClick="p4update10"/>
+		<progressbar name="pp" label="已完成" showLabel="true" sizing="extrasmall" >
+			<progressbar name="p1" label="批次1已完成" showLabel="true" percent="20" >
+			</progressbar>
+			<progressbar name="p2" label="批次2已完成" showLabel="true" percent="15" >
+			</progressbar>
+			<progressbar name="p3" label="批次3已完成" showLabel="true" percent="12" >
+			</progressbar>
+			<progressbar name="p4" label="批次4已完成" showLabel="true" percent="31" >
+			</progressbar>
+			<progressbar name="p5" label="批次5已完成" showLabel="true" percent="8" context="info" >
+			</progressbar>
+		</progressbar>
+		</panel-body>
+	</panel>
+	<attribute name="javascript">
+	<![CDATA[
+		function testTableSelectRow(rowid,status) {
+			console.log("select row : " + rowid+" -> "+status);
+		}
+		function testBtnClick() {
+			alert("button "+this.attr("name")+"'s label is "+this.attr("label"));
+			this.attr("label",this.attr("label")+" - clicked");
+			alert("button "+this.attr("name")+"'s label is "+this.attr("label"));			
+			alert("button "+this.attr("name")+" will be disabled! ");
+			this.attr("disabled",true);
+			
+		}
+		function openModalWindow() {
+	    	ui.modal("myModal").show();
+	    }
+	    function closeModalWindow() {
+	    	ui.modal("myModal").hide();
+	    }
+	    function testOnShow() {
+			alert("on show");
+		}
+		function testOnShown() {
+			alert("on shown");
+		}
+		function testOnHide() {
+			alert("on hide");
+		}
+		function testOnHidden() {
+			alert("on hidden");
+		}
+		//table demo
+		function testFormater(rowid, colModel, data, action){
+			var table = ui.table("tabledemo1");
+			console.log(colModel["rowId"]+" - name column : "+data["name"]);
+			return "<a href='#'>审批</a>";
+		}
+		function addrow() {
+			var rowid = (new Date()).getTime();
+			ui.table("tabledemo1").addRow(rowid,{id: rowid, name: "大兵new"+rowid, date: "2016年5月25日", sex: "男", addres: "沈阳市和平区"},"first");
+		}
+		function removerow() {
+			var rows= ui.table("tabledemo1").getSelectedRows();
+			if(rows.length>0) {
+				ui.table("tabledemo1").removeRow(rows[0]);
+			}
+		}
+		var rowid;
+		function editrow() {
+			var rows= ui.table("tabledemo1").getSelectedRows();
+			if(rows.length>0) {
+				rowid = rows[0];
+				ui.table("tabledemo1").editRow(rowid);
+			}
+		}
+		function saverow() {
+			rowid && ui.table("tabledemo1").saveRow(rowid,"/a/b/save");
+			rowid = undefuned;
+		}
+		function restorerow() {
+			rowid && ui.table("tabledemo1").restoreRow(rowid);
+			rowid=undefined;
+		}
+		function search() {
+			ui.table("tabledemo1").search({name:"xxx","b-date":"2015-06-07"});
+		}
+		function onshow(name){
+			//alert(name + " is show.");
+		}
+		function onhide(tab,panel){
+			//alert("event hide fired.");
+		}
+		function onshown(tab,panel){
+			//alert("event shown fired.");
+		}
+		function onhidden(tab,panel){
+			//alert("event hidden fired.");
+		}
+		function showit(){
+			//alert('auto show');
+			ui.tabs('tab1').show('tab7');
+		}
+		function showFirstTab(){
+			//alert('auto show');
+			ui.tabs('tab1').show(0);
+		}
+		function hideit(){
+			//alert('auto show');
+			ui.tabs('tab1').hide('tab7');
+		}
+		function disableit(){
+			ui.tabs('tab1').disable('tab7');
+		}
+		function enableit(){
+			ui.tabs('tab1').enable('tab7');
+		}
+		function setlable(){
+			ui.tabs('tab1').setLabel('tab7',"嘿！");
+		}
+		function setcontent(){
+			ui.tabs('tab1').setContent('tab7',"好使了！");
+		}
+		function shown(){
+			ui.tabs('tab1').shown('tab7');
+		}
+		function hiden(){
+			ui.tabs('tab1').hiden('tab7');
+		}
+		function reset(){
+			ui.progressbar('downloading').setPercent(0);
+		}
+		function update20(){
+			ui.progressbar('downloading').setPercent(20);
+		}
+		function update50(){
+			ui.progressbar('downloading').setPercent(50);
+		}
+		function update70(){
+			ui.progressbar('downloading').setPercent(70);
+		}
+		function finish(){
+			ui.progressbar('downloading').setPercent(100);
+		}
+		function p1update10(){
+			ui.progressbar('p1').setPercent(10);
+		}
+		function p2update10(){
+			ui.progressbar('p2').setPercent(10);
+		}
+		function p3update10(){
+			ui.progressbar('p3').setPercent(10);
+		}
+		function p4update10(){
+			ui.progressbar('p4').setPercent(10);
+		}
+	]]>
+	</attribute>
+</view>

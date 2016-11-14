@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<common-fields>
+	<!-- <common_create_time type="timestamp" comment="数据录入时间" label="数据录入时间">
+		<settime>insert</settime>
+		<include></include><exclude></exclude>
+	</common_create_time>
+	<common_update_time type="timestamp" comment="数据更新时间" label="数据更新时间">
+		<settime>insert,update</settime>
+	</common_update_time> -->
+</common-fields>

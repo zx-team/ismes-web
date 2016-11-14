@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="form-demo" title="UI - 表单演示样例">
+	<bunch layoutconstraint="md:12">
+		<plaintext text="页面生成时间 : "/><plaintext format="YYYY-MM-dd HH:mm:ss" bind="user.birthday" context="danger"/>
+	</bunch>
+	<panel heading="默认格式表单" layoutconstraint="md:12">
+		<panel-body>
+			<form name="form-default" action="/form/default/submit/url"
+				method="post">
+				<form-body>
+					<hidden name="userid1" value="1" />
+					<form-group>
+						<text name="username1" label="用户名" placeholder="请输入用户名" validate="{required:true}" />
+					</form-group>
+					<form-group>
+						<password name="password" label="密码" placeholder="请输入密码" validate="{required:true}" />
+					</form-group>
+					<form-group>
+						<label for="email1" text="邮箱"/>
+						<input-group>
+							<input-group-addon icon="envelope"/>
+							<text name="email1" placeholder="请输入您的电子邮箱" />
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="email1" text="身高"/>
+						<input-group>
+						 	<number name="height1" placeholder="请输入身高" readonly="false" value="190" format="###,###.00" validate="{required:true,digits:true,min:90}" bind="user.height" />
+						 	<input-group-addon text="cm" ></input-group-addon>	
+						 </input-group>
+					</form-group>
+					<form-group>
+						<date name="birthday1" label="出生日期" placeholder="请输入生日" validate="{required:true}" format="YYYY-MM-DD"/>
+					</form-group>
+					<form-group>
+						<date name="time1" label="出生时间" placeholder="请输入时间" validate="{required:true}" format="hh:mm:ss"/>
+					</form-group>
+					<form-group>
+						<label for="sex" text="性别"/>
+						<input-group>
+							<radio name="sex" label="男" value="male" checked="false" bind="user.sex"/>
+							<radio name="sex" label="女" value="female" checked="false"
+								bind="user.sex"/>
+							<radio name="sex" label="其他" value="other" bind="user.sex"/>
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="city1" text="您在那个城市生活?"/>
+						<input-group>
+							<input-group-addon text="City"/>
+							<select name="city1" placeholder="请选择所在城市" validate="{required:true}" bind="user.city" multiple="true">
+								<optgroup label="辽宁省">
+									<option value="0" label="沈阳" />
+									<option value="1" label="大连" />
+								</optgroup>
+								<option value="2" label="厦门" />
+								<option value="3" label="澳门" />
+								<option value="4" label="南海" />
+							</select>
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="comment1" text="备注"/>
+						<input-icon right="false" icon="comment" sizing="large">
+							<text name="comment1" sizing="large"/>
+						</input-icon>
+					</form-group>
+					<form-group>
+						<text name="validate_email" label="EMAIL" placeholder="请输入" validate="{email:true}" />
+					</form-group>
+					<form-group>
+						<text name="validate_mobile" label="手机号码" placeholder="请输入" validate="{mobile:true}" />
+						</form-group>
+					<form-group>
+						<text name="validate_phone" label="电话号码" placeholder="请输入" validate="{phone:true}" />
+						</form-group>
+					<form-group>
+						<text name="validate_idcard" label="身份证号" placeholder="请输入" validate="{idcard:true}" />
+						</form-group>
+					<form-group>
+						<text name="validate_postcode" label="邮政编码" placeholder="请输入" validate="{postcode:true}" />
+					</form-group>
+				</form-body>
+				<form-actions>
+					<button name="submit" label="提交" type="submit" context="primary" />
+					<button name="reset" label="重置" type="reset" />
+				</form-actions>
+			</form>
+		</panel-body>
+	</panel>
+	<panel heading="水平格式表单" layoutconstraint="md:12">
+		<panel-body>
+			<form name="form-horizontal" action="/form/inline/submit/url"
+				method="post" horizontal="true">
+				<form-body>
+					<hidden name="userid2" value="1" />
+					<form-group>
+						<label for="username2" text="用户名" layoutconstraint="md:2"/>
+						<text name="username2" placeholder="请输入用户名" validate="{required:true}" layoutconstraint="md:4;"/>
+						<label for="email2" text="邮箱" layoutconstraint="md:2"/>
+						<text name="email2" placeholder="请输入您的电子邮箱" layoutconstraint="md:4"/>
+					</form-group>
+					<form-group>
+						<label for="date1" text="日期" layoutconstraint="md:2"/>
+						<bunch layoutconstraint="md:10">
+							<input-inline width="medium">
+							<date name="date_b" placeholder="请输入起始日期" validate="{required:true}"/>
+							</input-inline>
+							<plaintext text="-"/>
+							<input-inline width="medium">
+							<date name="date_e" placeholder="请输入结束日期" validate="{required:true}"/>
+							</input-inline>
+						</bunch>
+ 					</form-group>
+					<form-group>
+						<label for="sex2" text="性别" layoutconstraint="md:2"/>
+						<input-group layoutconstraint="md:10">
+							<radio name="sex2" label="男" value="male" checked="false" bind="user.sex" inline="true"/>
+							<radio name="sex2" label="女" value="female" checked="false"
+								bind="user.sex"  inline="true"/>
+							<radio name="sex2" label="其他" value="other" bind="user.sex"  inline="true"/>
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="city2" text="您在那个城市生活?" layoutconstraint="md:2"/>
+						<input-group layoutconstraint="md:10">
+						<input-group-addon icon="road"/>
+						<select name="city2" placeholder="请选择所在城市" validate="{required:true}" bind="user.city">
+							<optgroup label="辽宁省">
+								<option value="0" label="沈阳" />
+								<option value="1" label="大连" />
+							</optgroup>
+							<option value="2" label="厦门" />
+							<option value="3" label="澳门" />
+							<option value="4" label="南海" />
+						</select>
+						</input-group>
+					</form-group>
+					<form-group>
+						<label for="favorite" text="您喜欢那些水果？" layoutconstraint="md:2"/>
+						<bunch layoutconstraint="md:10">
+							<checkbox name="favorite1" label="香蕉" value="banana"
+									bind='user.favorites' checked="true"/>
+								<checkbox name="favorite2" label="苹果" value="apple"
+									bind='user.favorites' checked="true" validate="{required:true}"/>
+								<checkbox name="favorite3" label="大鸭梨" value="pear"
+									bind='user.favorites' validate="{required:true}"/>
+								<checkbox name="favorite4" label="未知水果" value="XXX" 
+									disabled="true" />
+						</bunch>
+					</form-group>
+					<form-group>
+						<label for="introduce" text="自我介绍" layoutconstraint="md:2"/>
+						<textarea name="introduce" sizing="large" layoutconstraint="md:10"/>
+					</form-group>
+				</form-body>
+				<form-actions>
+					<button name="submit" label="提交" type="submit" context="primary" />
+					<button name="reset" label="重置" type="reset" />
+				</form-actions>
+			</form>
+		</panel-body>
+	 </panel>
+	<panel heading="内联格式表单" layoutconstraint="md:12;">
+		<panel-body>
+			<form name="form-inline" inline="true" action="/form/inline/submit/url"
+				method="post">
+				<form-body>
+					<hidden name="userid" value="1" />
+					<form-group>
+						<label for="username" text="用户名" />
+						<text name="username" placeholder="请输入用户名" validate="{required:true}" />
+					</form-group>
+					<form-group>
+						<label for="email" text="邮箱" />
+						<text name="email" placeholder="请输入您的电子邮箱" />
+					</form-group>
+					<form-group>
+						<label for="birthday" text="生日" />
+						<date name="birthday" placeholder="请输入生日" validate="{required:true}" />
+					</form-group>
+				</form-body>
+				<form-actions>
+					<button name="submit" label="提交" type="submit" context="primary" />
+					<button name="reset" label="重置" type="reset" />
+				</form-actions>
+			</form>
+		</panel-body>
+	</panel>
+	<attribute name="javascript">
+	<![CDATA[
+		
+	]]>
+	</attribute>
+</view>

@@ -1,0 +1,1208 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+    
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<title>UI - 组件演示样例</title>
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN STYLES -->
+					<link rel="stylesheet" href="resources/view/css/bootstrap.css">
+						<link rel="stylesheet" href="resources/view/css/font-awesome.css">
+				<link rel="stylesheet" href="resources/view/css/simple-line-icons.css">
+				<link rel="stylesheet" href="resources/view/css/components.css">
+					<link rel="stylesheet" href="resources/view/css/layout.css">
+				<link rel="stylesheet" href="resources/view/css/toastr.css">
+				<link rel="stylesheet" href="resources/view/css/custom.css">
+					<link rel="stylesheet" href="resources/view/css/themes/darkblue.css">
+																												<link rel="stylesheet" href="resources/table/css/select2.css">
+				<link rel="stylesheet" href="resources/table/css/select2-bootstrap.min.css">
+						<link rel="stylesheet" href="resources/table/css/ui.jqgrid-bootstrap.css">
+				<link rel="stylesheet" href="resources/table/css/bootstrap-datetimepicker.css">
+												<link rel="stylesheet" href="resources/checkbox/css/icheck/all.css">
+				<link rel="stylesheet" href="resources/checkbox/css/icheck/minimal/_all.css">
+				<link rel="stylesheet" href="resources/checkbox/css/icheck/minimal/minimal.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/futurico/futurico.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/polaris/polaris.css">
+						<link rel="stylesheet" href="resources/checkbox/css/icheck/minimal/grey.css">
+											<link rel="stylesheet" href="resources/image/css/jquery.fancybox.css">
+										<link rel="stylesheet" href="resources/search/css/typeahead.css">
+							<link rel="stylesheet" href="resources/datepaginator/css/bootstrap-datepaginator.css">
+															<link rel="stylesheet" href="resources/view/css/plugins.css">
+							<link rel="stylesheet" href="resources/view/css/ui.css">
+																																																																												<!-- END STYLES -->
+	</head>
+	
+	<!-- END HEAD -->
+	
+	<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+	
+		<div class="page-header navbar navbar-fixed-top">
+            <div class="page-header-inner ">
+                <div class="page-logo">
+                    <a href="#">
+                        <img src="#" alt="logo" class="logo-default" /> </a>
+                    <div class="menu-toggler sidebar-toggler glyphicon glyphicon-align-justify"> </div>
+                </div>
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+						<li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                                                <img alt="" class="img-circle " src="#" />
+                                <span class="username username-hide-on-mobile"> 
+                                userName                                </span>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="">
+                                        <i class="icon-lock"></i> Lock Screen </a>
+                                </li>
+                                <li>
+                                    <a href="../../logout">
+                                        <i class="icon-key"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+	
+	
+		<div class="page-container">
+		
+			<div class="page-sidebar-wrapper">
+				<div class="page-sidebar navbar-collapse collapse">
+					<ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+					
+					
+					<li class="sidebar-toggler-wrapper hide">
+                            <div class="sidebar-toggler"> </div>
+                        </li>
+                        
+                        
+                        <li class="sidebar-search-wrapper">
+                            <form class="sidebar-search  " action="#" method="POST">
+                                <a href="javascript:;" class="remove">
+                                    <i class="icon-close"></i>
+                                </a>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <a href="javascript:;" class="btn submit">
+                                            <i class="icon-magnifier"></i>
+                                        </a>
+                                    </span>
+                                </div>
+                            </form>
+                            <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                        </li>
+					
+					
+						                        
+                    </ul>
+				</div>
+			</div>
+		
+        
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                                       <h3 class="page-title"> UI - 组件演示样例
+                                            </h3>
+                                      
+            	 <div class="row">
+ <!-- tabs BEGIN -->
+<div id="demos"
+	>
+			
+		
+		
+
+
+
+<ul class="nav nav-tabs">
+						<li id="tb_buttons"class="active "><a   data-toggle="tab"  href="#tp_buttons"   >按钮例子</a>
+							</li>
+								<li id="tb_dropdown"class=""><a   data-toggle="tab"  href="#tp_dropdown"   >下拉例子</a>
+							</li>
+								<li id="tb_modal"class=""><a   data-toggle="tab"  href="#tp_modal"   >模态窗口</a>
+							</li>
+								<li id="tb_tables"class=""><a   data-toggle="tab"  href="#tp_tables"   >表格例子</a>
+							</li>
+								<li id="tb_tabs"class=""><a   data-toggle="tab"  href="#tp_tabs"   >标签页例子</a>
+							</li>
+								<li id="tb_progress"class=""><a   data-toggle="tab"  href="#tp_progress"   >进度条例子</a>
+							</li>
+								<li id="tb_notify"class=""><a   data-toggle="tab"  href="#tp_notify"   >进度条例子</a>
+							</li>
+								<li id="tb_images"class=""><a   data-toggle="tab"  href="#tp_images"   >图片放大显示例子</a>
+							</li>
+								<li id="tb_search"class=""><a   data-toggle="tab"  href="#tp_search"   >检索组件</a>
+							</li>
+								<li id="tb_DatePaginator"class=""><a   data-toggle="tab"  href="#tp_DatePaginator"   >时间日期组件</a>
+							</li>
+			</ul>
+
+
+	<!-- tab-content BEGIN -->
+	<div class="tab-content">
+<div class="tab-pane fade active in
+"
+id="tp_buttons"><div class="bunch ">
+<a id="aaa1" href="javascript:void(0);" class="btn btn-link btn-xs col-sm-2 col-md-2">&#38142;&#25509;&#25353;&#38062;
+</a>
+
+<input id="aaa2" name="aaa2" type="button" value="&#25353;&#38062;
+" class="btn btn-default col-sm-2 col-md-2 col-md-offset-1" title="&#24050;&#32465;&#23450;&#28857;&#20987;&#20107;&#20214;" data-toggle="tooltip">
+
+<input id="aaa3" name="aaa3" type="submit" value="&#39318;&#35201;
+" class="btn btn-primary btn-lg col-sm-2 col-md-2 col-md-offset-1">
+
+<input id="aaa4" name="aaa4" type="reset" value="&#21361;&#38505;
+" class="btn btn-danger btn-hg col-sm-2 col-md-2 col-md-offset-1">
+</div></div><div class="tab-pane fade "
+id="tp_dropdown"><div class="bunch ">
+<div id="dropdown1" class="btn-group dropup col-md-offset-0"> 
+	<button type="button" class="btn  btn-default btn-xs">&#27491;&#24120;&#26497;&#23567;
+		</button>
+		<button type="button" class="btn  btn-default dropdown-toggle btn-xs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+		<ul id="dropdown1_menu" class="dropdown-menu" role="menu">
+					<li><a href="#">菜单1</a></li>
+									<li><a href="#">菜单2</a></li>
+											<li role="separator" class="divider"></li>
+							<li><a href="#">菜单3</a></li>
+						</ul>
+</div>
+<div id="dropdown4" class="btn-group dropup col-md-offset-1"> 
+	<button type="button" class="btn  btn-danger btn-sm">&#21361;&#38505;&#23567;
+		</button>
+		<button type="button" class="btn  btn-danger dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+		<ul id="dropdown4_menu" class="dropdown-menu" role="menu">
+					<li><a href="#">菜单1</a></li>
+									<li><a href="#">菜单2</a></li>
+											<li role="separator" class="divider"></li>
+							<li><a href="#">菜单3</a></li>
+						</ul>
+</div>
+<div id="dropdown2" class="btn-group col-md-offset-1"> 
+	<button type="button" class="btn  btn-warning btn- dropdown-toggle" data-toggle="dropdown">&#35686;&#21578;&#19968;&#33324;
+		<span class="caret"></span>
+		</button>
+		<ul id="dropdown2_menu" class="dropdown-menu" role="menu">
+					<li><a href="#">菜单1</a></li>
+									<li><a href="#">菜单2</a></li>
+											<li role="separator" class="divider"></li>
+							<li><a href="#">菜单3</a></li>
+						</ul>
+</div>
+<div id="dropdown3" class="btn-group dropup col-md-offset-1"> 
+	<button type="button" class="btn  btn-primary btn-lg">&#39318;&#35201;&#22823;
+		</button>
+		<button type="button" class="btn  btn-primary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+	</button>
+		<ul id="dropdown3_menu" class="dropdown-menu" role="menu">
+					<li><a href="#">菜单1</a></li>
+									<li><a href="#">菜单2</a></li>
+											<li role="separator" class="divider"></li>
+							<li><a href="#">菜单3</a></li>
+						</ul>
+</div></div></div><div class="tab-pane fade "
+id="tp_modal">
+<input id="openModal" name="openModal" type="button" value="&#24377;&#20986;&#27169;&#24577;&#31383;&#21475;
+" class="btn btn-default">
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    	<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+        <h4 class="modal-title" id="myModalLabel">模态窗口</h4>
+      </div>
+	 
+
+<div class="modal-body">
+ 
+<form id="form-default" name="form-default" action="/form/default/submit/url" method="post" class="">
+<div class="form-body">
+<input id="userid1" name="userid1" type="hidden" value="1"><div class="form-group">
+<label for="username2" class="control-label">&#29992;&#25143;&#21517;
+</label>
+<input id="username2" name="username2" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#29992;&#25143;&#21517;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="password2" class="control-label">&#23494;&#30721;
+</label>
+<input id="password2" name="password2" type="password" class="form-control" placeholder="&#35831;&#36755;&#20837;&#23494;&#30721;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="email12" class="control-label ">&#37038;&#31665;
+</label><div class="input-group">		<div class="input-group-addon">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</div>
+
+<input id="email2" name="email2" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#24744;&#30340;&#30005;&#23376;&#37038;&#31665;">
+</div>
+</div><div class="form-group">
+<label for="city2" class="control-label ">&#24744;&#22312;&#37027;&#20010;&#22478;&#24066;&#29983;&#27963;?
+</label><div class="input-group"><span class="input-group-addon">City</span>
+<select id="city2" name="city2" multiple="multiple" class="form-control multiselect multiselect-info" placeholder="&#35831;&#36873;&#25321;&#25152;&#22312;&#22478;&#24066;" data-validate="{required:true}">
+
+<optgroup label="&#36797;&#23425;&#30465;
+">
+<option value="0">&#27784;&#38451;
+</option>
+<option value="1">&#22823;&#36830;
+</option>
+</optgroup>
+<option value="2">&#21414;&#38376;
+</option>
+<option value="3">&#28595;&#38376;
+</option>
+<option value="4">&#21335;&#28023;
+</option>
+		</select>
+</div>
+</div><div class="form-group">
+<label for="comment2" class="control-label ">&#22791;&#27880;
+</label><div class="input-icon input-icon-lg">
+ <i class="fa fa-comment"></i>
+
+<input id="comment1" name="comment1" type="text" class="form-control input-lg">
+</div>
+</div></div>
+</form>
+
+	</div>
+	<div class="modal-footer">
+<input id="submit2" name="submit2" type="submit" value="&#25552;&#20132;
+" class="btn btn-primary">
+
+<input id="reset2" name="reset2" type="reset" value="&#37325;&#32622;
+" class="btn btn-default">
+
+<input id="closeModal" name="closeModal" type="button" value="&#20851;&#38381;&#31383;&#21475;
+" class="btn btn-default">
+
+	</div>
+      
+    </div>
+  </div>
+</div></div><div class="tab-pane fade "
+id="tp_tables">    <table  id="tabledemo1"></table>
+    <div id="table_pager_tabledemo1"></div><div class="table-actions">
+
+<input id="addrow" name="addrow" type="button" value="add row
+" class="btn btn-default" title="&#28857;&#20987;-&#22312;&#34920;&#39318;&#22686;&#21152;&#19968;&#34892;" data-toggle="tooltip">
+
+<input id="removerow" name="removerow" type="button" value="remove row
+" class="btn btn-default" title="&#28857;&#20987;-&#21024;&#38500;&#36873;&#20013;&#30340;&#31532;&#19968;&#34892;" data-toggle="tooltip">
+
+<input id="editrow" name="editrow" type="button" value="edit row
+" class="btn btn-default" title="&#28857;&#20987;-&#32534;&#36753;&#36873;&#20013;&#30340;&#31532;&#19968;&#34892;" data-toggle="tooltip">
+
+<input id="saverow" name="saverow" type="button" value="save row
+" class="btn btn-default" title="&#28857;&#20987;-&#20445;&#23384;&#36890;&#36807;&#12304;edit row&#12305;&#25353;&#38062;&#36827;&#34892;&#32534;&#36753;&#30340;&#34892;" data-toggle="tooltip">
+
+<input id="restorerow" name="restorerow" type="button" value="restore row
+" class="btn btn-default" title="&#28857;&#20987;-&#21462;&#28040;&#36890;&#36807;&#12304;edit row&#12305;&#25353;&#38062;&#36827;&#34892;&#32534;&#36753;&#30340;&#32534;&#36753;&#29366;&#24577;" data-toggle="tooltip">
+</div>
+</div><div class="tab-pane fade "
+id="tp_tabs">
+<input id="showbtn" name="showbtn" type="button" value="&#26174;&#31034; tab7
+" class="btn btn-default">
+
+<input id="contentbtn" name="contentbtn" type="button" value="&#26174;&#31034;&#31532;&#19968;&#20010;tab
+" class="btn btn-default">
+
+<input id="disbtn" name="disbtn" type="button" value="&#31105;&#29992; tab7
+" class="btn btn-default">
+
+<input id="enabtn" name="enabtn" type="button" value="&#21551;&#29992; tab7
+" class="btn btn-default">
+
+<input id="lablebtn" name="lablebtn" type="button" value="&#35774;&#32622; tab7 &#26631;&#31614;
+" class="btn btn-default">
+
+<input id="contentbtn" name="contentbtn" type="button" value="&#35774;&#32622; tab7 &#20869;&#23481;
+" class="btn btn-default">
+<!-- tabs BEGIN -->
+<div id="tab1"
+	>
+			
+		
+		
+
+
+
+<ul class="nav nav-tabs">
+						<li id="tb_tab1"class=""><a   data-toggle="tab"  href="#tp_tab1"   > 表单</a>
+							</li>
+								<li id="tb_tab2"class=""><a   data-toggle="tab"  href="#tp_tab2"   >Profile</a>
+							</li>
+								<li id="tb_tab3"class=""><a   data-toggle="tab"  href="#tp_tab3"   >Others</a>
+							</li>
+								<li id="tb_tab4"class=""><a   data-toggle="tab"  href="#tp_tab4"   >tab4</a>
+							</li>
+								<li id="tb_tab5"class=""><a   data-toggle="tab"  href="#tp_tab5"   >tab5</a>
+							</li>
+								<li id="tb_tab6"class=""><a   data-toggle="tab"  href="#tp_tab6"   >tab6</a>
+							</li>
+								<li id="tb_tab7"class=""><a   data-toggle="tab"  href="#tp_tab7"   >tab7</a>
+							</li>
+								<li id="tb_tab8"class=""><a   data-toggle="tab"  href="#tp_tab8"   >tab8</a>
+							</li>
+								<li id="tb_tab9"class="dropdown "><a  href="javacript:;" class="dropdown-toggle"    data-toggle="dropdown"  >tab9<i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu" role="menu">
+													<li>
+				                <li id="tb_tab11"   >
+				                <a  href="#tp_tab11" data-toggle="tab"  tabindex="-1">tab11</a>
+				            </li>
+				        							<li>
+				                <li id="tb_tab12"   >
+				                <a  href="#tp_tab12" data-toggle="tab"  tabindex="-1">tab12</a>
+				            </li>
+				        							<li>
+				                <li id="tb_tab13"   >
+				                <a  href="#tp_tab13" data-toggle="tab"  tabindex="-1">tab13</a>
+				            </li>
+				        					</ul>
+							</li>
+			</ul>
+
+
+	<!-- tab-content BEGIN -->
+	<div class="tab-content">
+<div class="tab-pane fade "
+id="tp_tab1"><form id="form-default" name="form-default" action="/form/default/submit/url" method="post" class="">
+<div class="form-body">
+<input id="userid1" name="userid1" type="hidden" value="1"><div class="form-group">
+<label for="username1" class="control-label">&#29992;&#25143;&#21517;
+</label>
+<input id="username1" name="username1" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#29992;&#25143;&#21517;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="password" class="control-label">&#23494;&#30721;
+</label>
+<input id="password" name="password" type="password" class="form-control" placeholder="&#35831;&#36755;&#20837;&#23494;&#30721;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="email1" class="control-label ">&#37038;&#31665;
+</label><div class="input-group">		<div class="input-group-addon">
+			<span class="glyphicon glyphicon-envelope"></span>
+		</div>
+
+<input id="email1" name="email1" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;&#24744;&#30340;&#30005;&#23376;&#37038;&#31665;">
+</div>
+</div><div class="form-group">
+<label for="email1" class="control-label ">&#36523;&#39640;
+</label><div class="input-group">
+<input id="height1" name="height1" type="text" value="190.00" class="form-control" placeholder="&#35831;&#36755;&#20837;&#36523;&#39640;" data-validate="{required:true,digits:true,min:90}">
+<span class="input-group-addon">cm</span>
+</div>
+</div><div class="form-group">
+<label for="birthday1" class="control-label">&#20986;&#29983;&#26085;&#26399;
+</label>
+<input id="birthday1" name="birthday1" type="text" value="" class="form-control" data-date-format="YYYY-MM-DD" placeholder="&#35831;&#36755;&#20837;&#29983;&#26085;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="time1" class="control-label">&#20986;&#29983;&#26102;&#38388;
+</label>
+<input id="time1" name="time1" type="text" value="" class="form-control" data-date-format="hh:mm:ss" placeholder="&#35831;&#36755;&#20837;&#26102;&#38388;" data-validate="{required:true}">
+</div><div class="form-group">
+<label for="sex" class="control-label ">&#24615;&#21035;
+</label><div class="input-group">
+<div class="radio">
+	<label>
+		<input  id="sex_male" name="sex" type="radio" value="male" class="icheck">
+	&#30007;
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+		<input  id="sex_female" name="sex" type="radio" value="female" class="icheck">
+	&#22899;
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+		<input  id="sex_other" name="sex" type="radio" value="other" class="icheck" disabled>
+	&#20854;&#20182;
+	</label>
+</div>
+</div>
+</div><div class="form-group">
+<label for="city1" class="control-label ">&#24744;&#22312;&#37027;&#20010;&#22478;&#24066;&#29983;&#27963;?
+</label><div class="input-group"><span class="input-group-addon">City</span>
+<select id="city1" name="city1" multiple="multiple" class="form-control multiselect multiselect-info" placeholder="&#35831;&#36873;&#25321;&#25152;&#22312;&#22478;&#24066;" data-validate="{required:true}">
+
+<optgroup label="&#36797;&#23425;&#30465;
+">
+<option value="0">&#27784;&#38451;
+</option>
+<option value="1">&#22823;&#36830;
+</option>
+</optgroup>
+<option value="2">&#21414;&#38376;
+</option>
+<option value="3">&#28595;&#38376;
+</option>
+<option value="4">&#21335;&#28023;
+</option>
+		</select>
+</div>
+</div><div class="form-group">
+<label for="comment1" class="control-label ">&#22791;&#27880;
+</label><div class="input-icon input-icon-lg">
+ <i class="fa fa-comment"></i>
+
+<input id="comment1" name="comment1" type="text" class="form-control input-lg">
+</div>
+</div><div class="form-group">
+<label for="validate_email" class="control-label">EMAIL
+</label>
+<input id="validate_email" name="validate_email" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;" data-validate="{email:true}">
+</div><div class="form-group">
+<label for="validate_mobile" class="control-label">&#25163;&#26426;&#21495;&#30721;
+</label>
+<input id="validate_mobile" name="validate_mobile" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;" data-validate="{mobile:true}">
+</div><div class="form-group">
+<label for="validate_phone" class="control-label">&#30005;&#35805;&#21495;&#30721;
+</label>
+<input id="validate_phone" name="validate_phone" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;" data-validate="{phone:true}">
+</div><div class="form-group">
+<label for="validate_idcard" class="control-label">&#36523;&#20221;&#35777;&#21495;
+</label>
+<input id="validate_idcard" name="validate_idcard" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;" data-validate="{idcard:true}">
+</div><div class="form-group">
+<label for="validate_postcode" class="control-label">&#37038;&#25919;&#32534;&#30721;
+</label>
+<input id="validate_postcode" name="validate_postcode" type="text" class="form-control" placeholder="&#35831;&#36755;&#20837;" data-validate="{postcode:true}">
+</div></div><div class="form-actions">
+
+<input id="submit" name="submit" type="submit" value="&#25552;&#20132;
+" class="btn btn-primary">
+
+<input id="reset" name="reset" type="reset" value="&#37325;&#32622;
+" class="btn btn-default">
+</div>
+</form>
+</div><div class="tab-pane fade "
+id="tp_tab2">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;2
+</span></div><div class="tab-pane fade "
+id="tp_tab3">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;3
+</span></div><div class="tab-pane fade "
+id="tp_tab4">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;4 : 
+</span></div><div class="tab-pane fade "
+id="tp_tab5">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;5 : 
+</span></div><div class="tab-pane fade "
+id="tp_tab6">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;6 : 
+</span></div><div class="tab-pane fade "
+id="tp_tab7">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;7: 
+</span></div><div class="tab-pane fade "
+id="tp_tab8">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;8: 
+</span></div><div class="tab-pane fade "
+id="tp_tab9">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481;9 : 
+</span></div><div class="tab-pane fade "
+id="tp_tab11">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481; 11: 
+</span></div><div class="tab-pane fade "
+id="tp_tab12">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481; 12: 
+</span></div><div class="tab-pane fade "
+id="tp_tab13">
+<span class=" text-default">&#26631;&#31614;&#38754;&#26495;&#20869;&#23481; 13: 
+</span></div>			</div><!-- class=content div end -->
+				</div>
+<!-- tab ending --></div><div class="tab-pane fade "
+id="tp_progress">
+<input id="btn_reset" name="btn_reset" type="button" value="Reset
+" class="btn btn-default">
+
+<input id="btn_20" name="btn_20" type="button" value="&#23436;&#25104;20%
+" class="btn btn-default">
+
+<input id="btn_50" name="btn_50" type="button" value="&#23436;&#25104;30%
+" class="btn btn-default">
+
+<input id="btn_70" name="btn_70" type="button" value="&#23436;&#25104;10%
+" class="btn btn-default">
+
+<input id="btn_finish" name="btn_finish" type="button" value="Finish
+" class="btn btn-default">
+
+<input id="btn_setlable" name="btn_setlable" type="button" value="&#35774;&#32622;&#26631;&#31614;&#20869;&#23481;
+" class="btn btn-default">
+<div id="downloading" class="progress progress-bar-sm">  <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 20.0%;">
+       <span   label="已完成" id="text_downloading" >已完成20.0% </span>
+  </div>
+</div>
+<input id="btn_p1" name="btn_p1" type="button" value="p1&#35843;&#25972;
+" class="btn btn-default">
+
+<input id="btn_p2" name="btn_p2" type="button" value="p2&#35843;&#25972;
+" class="btn btn-default">
+
+<input id="btn_p3" name="btn_p3" type="button" value="p3&#35843;&#25972;
+" class="btn btn-default">
+
+<input id="btn_p4" name="btn_p4" type="button" value="p4&#35843;&#25972;
+" class="btn btn-default">
+
+<input id="btn_pt" name="btn_pt" type="button" value="&#35841;&#26159;&#29366;&#20803;
+" class="btn btn-default">
+
+<input id="btn_pt2" name="btn_pt2" type="button" value="&#36824;&#35841;&#26159;&#29366;&#20803;
+" class="btn btn-default">
+<div id="pp" class="progress progress-bar-">   <div class="progress-bar progress-bar-default" id="p1" role="progressbar" aria-valuenow="20.0" aria-valuemin="0" aria-valuemax="100" 
+   style="width: 20.0%;">
+       <span  id="text_p1" label="批次1已完成">批次1已完成20.0% </span>
+   </div>
+      <div class="progress-bar progress-bar-success" id="p2" role="progressbar" aria-valuenow="15.0" aria-valuemin="0" aria-valuemax="100" 
+   style="width: 15.0%;">
+       <span  id="text_p2" label="批次2已完成">批次2已完成15.0% </span>
+   </div>
+      <div class="progress-bar progress-bar-info" id="p3" role="progressbar" aria-valuenow="12.0" aria-valuemin="0" aria-valuemax="100" 
+   style="width: 12.0%;">
+       <span  id="text_p3" label="批次3已完成">批次3已完成12.0% </span>
+   </div>
+      <div class="progress-bar progress-bar-warning" id="p4" role="progressbar" aria-valuenow="31.0" aria-valuemin="0" aria-valuemax="100" 
+   style="width: 31.0%;">
+       <span  id="text_p4" label="批次4已完成">批次4已完成31.0% </span>
+   </div>
+      <div class="progress-bar progress-bar-info" id="p5" role="progressbar" aria-valuenow="8.0" aria-valuemin="0" aria-valuemax="100" 
+   style="width: 8.0%;">
+       <span  id="text_p5" label="批次5已完成">批次5已完成8.0% </span>
+   </div>
+   </div></div><div class="tab-pane fade "
+id="tp_notify">
+<input id="Alert-Demo" name="Alert-Demo" type="button" value="Alert-Demo
+" class="btn btn-primary">
+
+<input id="Confirm-Demo" name="Confirm-Demo" type="button" value="Confirm-Demo
+" class="btn btn-primary">
+
+<input id="Dialog-Demo" name="Dialog-Demo" type="button" value="Dialog-Demo
+" class="btn btn-primary">
+
+<input id="Success-Demo" name="Success-Demo" type="button" value="Success-Demo
+" class="btn btn-success">
+
+<input id="Info_Demo" name="Info_Demo" type="button" value="Info_Demo
+" class="btn btn-info">
+
+<input id="Warn_Demo" name="Warn_Demo" type="button" value="Warn_Demo
+" class="btn btn-warning">
+
+<input id="Error_Demo" name="Error_Demo" type="button" value="Error_Demo
+" class="btn btn-danger">
+</div><div class="tab-pane fade "
+id="tp_images"><a class="fancybox" href="http://imgstore.cdn.sogou.com/app/a/100540002/714860.jpg" >
+<img id="image1" src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png" class="img-thumbnail"
+ height="100.0" width="100.0" >
+</a>
+</div><div class="tab-pane fade "
+id="tp_search"><form id="form-default" name="form-default" action="/form/default/submit/url" method="post" class="">
+<div class="form-body"><div class="form-group">
+<label for="search-demo" class="control-label">&#26816;&#32034;
+</label>
+<input id="search-demo" name="search-demo" type="text" class="form-control">
+</div></div>
+</form>
+</div><div class="tab-pane fade "
+id="tp_DatePaginator"> <div  id="paginatordemo"> </div>
+</div>			</div><!-- class=content div end -->
+				</div>
+<!-- tab ending -->   	</div>
+   </div>
+  </div>
+</div>
+
+									<!--[if lt IE 9]>
+						<script src="resources/view/js/respond.min.js"></script>
+														<script src="resources/view/js/excanvas.min.js"></script>
+						<![endif]-->
+																	<script src="resources/view/js/jquery.min.js"></script>
+														<script src="resources/view/js/bootstrap.js"></script>
+																																									<script src="resources/view/js/bootbox.js"></script>
+														<script src="resources/view/js/toastr.js"></script>
+														<script src="resources/view/js/ui.js"></script>
+														<script src="resources/view/js/ui.view.js"></script>
+														<script src="resources/table/js/moment.js"></script>
+														<script src="resources/view/js/jquery.slimscroll.js"></script>
+														<script src="resources/view/js/jquery.cokie.min.js"></script>
+														<script src="resources/view/js/bootstrap-hover-dropdown.js"></script>
+														<script src="resources/view/js/jquery.blockui.min.js"></script>
+														<script src="resources/view/js/jquery.uniform.js"></script>
+														<script src="resources/view/js/app.js"></script>
+														<script src="resources/view/js/layout.js"></script>
+														<script src="resources/view/js/quick-sidebar.js"></script>
+														<script src="resources/tabs/js/ui.tabs.js"></script>
+														<script src="resources/tab/js/bootstrap-tabdrop.js"></script>
+														<script src="resources/button/js/ui.button.js"></script>
+														<script src="resources/modal/js/ui.modal.js"></script>
+														<script src="resources/form/js/jquery.metadata.js"></script>
+														<script src="resources/form/js/jquery.validate.js"></script>
+														<script src="resources/form/js/ui.form.js"></script>
+														<script src="resources/hidden/js/ui.hidden.js"></script>
+														<script src="resources/text/js/ui.text.js"></script>
+														<script src="resources/password/js/ui.password.js"></script>
+														<script src="resources/label/js/ui.label.js"></script>
+																				<script src="resources/table/js/select2.full.js"></script>
+														<script src="resources/table/js/ui.select.js"></script>
+																				<script src="resources/table/js/i18n/grid.locale-en.js"></script>
+														<script src="resources/table/js/jquery.jqGrid.js"></script>
+														<script src="resources/table/js/bootstrap-datetimepicker.js"></script>
+														<script src="resources/table/js/bootstrap3-typeahead.js"></script>
+														<script src="resources/table/js/ui.table.js"></script>
+														<script src="resources/table/js/jquery.validate2.js"></script>
+														<script src="resources/number/js/ui.number.js"></script>
+														<script src="resources/date/js/ui.date.js"></script>
+																																																								<script src="resources/checkbox/js/icheck.js"></script>
+														<script src="resources/radio/js/ui.radio.js"></script>
+														<script src="resources/progressbar/js/ui.progressbar.js"></script>
+														<script src="resources/image/js/jquery.fancybox.js"></script>
+														<script src="resources/image/js/ui.image.js"></script>
+																																						<script src="resources/search/js/typeahead.bundle.js"></script>
+														<script src="resources/search/js/handlebars.js"></script>
+														<script src="resources/search/js/ui.search.js"></script>
+																	<script src="resources/datepaginator/js/bootstrap-datepicker.js"></script>
+														<script src="resources/datepaginator/js/bootstrap-datepaginator.js"></script>
+														<script src="resources/datepaginator/js/ui.datepaginator.js"></script>
+						
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+	ui.URL_PREFIX="/";
+	(function(){
+		//user defined functions 
+		
+	
+		function testTableSelectRow(rowid,status) {
+			ui.info("select row : " + rowid+" -> "+status);
+		}
+		function handleOnSelectedDateChanged(date){
+			ui.info("Selected date: " + moment(date).format("YYYY-MM-DD"));
+		}
+		function testSubTableSelectRow(rowid,status) {
+			ui.info("select subtable row : " + rowid+" -> "+status);
+		}
+		function testBtnClick() {
+			alert("button "+this.attr("name")+"'s label is "+this.attr("label"));
+			this.attr("label",this.attr("label")+" - clicked");
+			alert("button "+this.attr("name")+"'s label is "+this.attr("label"));			
+			alert("button "+this.attr("name")+" will be disabled! ");
+			this.attr("disabled",true);
+			
+		}
+		function openModalWindow() {
+	    	ui.modal("myModal").show();
+	    }
+	    function closeModalWindow() {
+	    	ui.modal("myModal").hide();
+	    }
+	    function testOnShow() {
+			ui.info("on show");
+		}
+		function testOnShown() {
+			ui.info("on shown");
+		}
+		function testOnHide() {
+			ui.info("on hide");
+		}
+		function testOnHidden() {
+			ui.info("on hidden");
+		}
+		//table demo
+		function testFormater(rowid, colModel, data, action){
+			var table = ui.table("tabledemo1");
+			console.log(colModel["rowId"]+" - name column : "+data["name"]);
+			return "<a href='#'>审批</a>";
+		}
+		function addrow() {
+			var rowid = (new Date()).getTime();
+			ui.table("tabledemo1").addRow(rowid,{id: rowid, name: "大兵new"+rowid, date: "2016年5月25日", sex: "男", addres: "沈阳市和平区"},"first");
+		}
+		function removerow() {
+			var rows= ui.table("tabledemo1").getSelectedRows();
+			if(rows.length>0) {
+				ui.table("tabledemo1").removeRow(rows[0]);
+			}
+		}
+		var rowid;
+		function editrow() {
+			var rows= ui.table("tabledemo1").getSelectedRows();
+			if(rows.length>0) {
+				rowid = rows[0];
+				ui.table("tabledemo1").editRow(rowid);
+			}
+		}
+		function saverow() {
+			rowid && ui.table("tabledemo1").saveRow(rowid,"/a/b/save");
+			rowid = undefuned;
+		}
+		function restorerow() {
+			rowid && ui.table("tabledemo1").restoreRow(rowid);
+			rowid=undefined;
+		}
+		function search() {
+			ui.table("tabledemo1").search({name:"xxx","b-date":"2015-06-07"});
+		}
+		function onshow(name){
+			//alert(name + " is show.");
+		}
+		function onhide(tab,panel){
+			//alert("event hide fired.");
+		}
+		function onshown(tab,panel){
+			//alert("event shown fired.");
+		}
+		function onhidden(tab,panel){
+			//alert("event hidden fired.");
+		}
+		function showit(){
+			//alert('auto show');
+			ui.tabs('tab1').show('tab7');
+		}
+		function showFirstTab(){
+			//alert('auto show');
+			ui.tabs('tab1').show(0);
+		}
+		function hideit(){
+			//alert('auto show');
+			ui.tabs('tab1').hide('tab7');
+		}
+		function disableit(){
+			ui.tabs('tab1').disable('tab7');
+		}
+		function enableit(){
+			ui.tabs('tab1').enable('tab7');
+		}
+		function setlable(){
+			ui.tabs('tab1').setLabel('tab7',"嘿！");
+		}
+		function setcontent(){
+			ui.tabs('tab1').setContent('tab7',"好使了！");
+		}
+		function shown(){
+			ui.tabs('tab1').shown('tab7');
+		}
+		function hiden(){
+			ui.tabs('tab1').hiden('tab7');
+		}
+		function reset(){
+			ui.progressbar('downloading').percent(0);
+		}
+		function update20(){
+			ui.progressbar('downloading').percent(20);
+		}
+		function update50(){
+			ui.progressbar('downloading').percent(50);
+		}
+		function update70(){
+			ui.progressbar('downloading').percent(70);
+		}
+		function finish(){
+			ui.progressbar('downloading').percent(100);
+		}
+		function setLable(){
+			alert(ui.progressbar('downloading').label());
+			ui.progressbar('downloading').label("数据量已经完成25万箱");
+		}
+		function p1update10(){
+			ui.progressbar('p1').percent(10);
+		}
+		function p2update10(){
+			ui.progressbar('p2').percent(10);
+		}
+		function p3update10(){
+			ui.alert("current percent:"+ui.progressbar('p3').percent());
+			ui.progressbar('p3').percent(10);
+		}
+		function p4update10(){
+			ui.alert("current percent:"+ui.progressbar('p4').percent());
+			ui.progressbar('p4').percent(10);
+		}
+		function ptop(){
+			ui.alert("old label:"+ui.progressbar('p2').label());
+			ui.progressbar('p2').label("我是状元");
+		}
+		function ptop2(){
+			ui.alert("old label:"+ui.progressbar('p3').label());
+			ui.progressbar('p3').label("我也是状元");
+		}
+		function alert_demo(){
+			ui.alert("Test AlertDemo", function(){
+				alert("TestAlert!......");
+			});
+		}
+		function confirm_demo(){
+			ui.confirm("Test ConfirmDemo", function(data){
+				if(data){
+					alert("You clicked Ok.......!");
+				}else{
+					alert("You clicked cancel.........! ");
+				}
+			});
+		}
+		function dialog_demo(){
+			ui.dialog("Test DialogDemo Title!", "Test DialogDemo Message!", [{name:'danger',label:'Danger',context:'danger'},{name:'success',label:'success',context:'success'},{name:'main',label:'Click ME!',context:'primary'}], function(result){
+				alert(result);
+			});
+		}
+		function toastr_success_Demo(){
+			ui.success("Test ToastrSuccess Message!", "Test ToastrSuccess Title!");
+		}
+		function toastr_info_Demo(){
+			ui.info("Test ToastrInfo Message!", "Test ToastrInfo Title!");
+		}
+		function toastr_warn_Demo(){
+			ui.warn("Test ToastrWarn Message!", "Test ToastrWarn Title!");
+		}
+		function toastr_error_Demo(){
+			ui.error("Test ToastrError Message!", "Test ToastrError Title!");
+		}
+	
+			//components init
+		(function(){
+					$('#aaa2').tooltip();ui.button("aaa2").bind("click",testBtnClick);
+
+ui.button("aaa4").bind("click",testBtnClick);
+
+$('#dropdown1 .dropdown-toggle').dropdown();
+$('#dropdown4 .dropdown-toggle').dropdown();
+$('#dropdown2 .dropdown-toggle').dropdown();
+$('#dropdown3 .dropdown-toggle').dropdown();
+ui.button("openModal").bind("click",openModalWindow);
+
+ui.modal("myModal").init({
+keyboard:true,
+});
+ui.modal("myModal").bind("hide",testOnHide);
+ui.modal("myModal").bind("shown",testOnShown);
+ui.modal("myModal").bind("hidden",testOnHidden);
+ui.modal("myModal").bind("show",testOnShow);
+
+ui.form("form-default").init();
+ui.select("city2").init({ placeholder:'请选择所在城市',});
+
+ui.button("closeModal").bind("click",closeModalWindow);
+
+ui.table("tabledemo1").init({
+		data : 
+			
+				[
+					{id: "1", name: "大兵1", date: "2016年5月25日", sex: "男", addres: "沈阳市和平区"},
+					{id: "2", name: "大兵2", date: "2016年5月26日", sex: "女", addres: "沈阳市和平区"},
+					{id: "3", name: "大兵3", date: "2016年5月27日", sex: "男", addres: "沈阳市和平区"},
+					{id: "4", name: "大兵4", date: "2016年5月28日", sex: "女", addres: "沈阳市和平区"},
+					{id: "5", name: "大兵5", date: "2016年5月29日", sex: "男", addres: "沈阳市和平区"},
+					{id: "6", name: "大兵6", date: "2016年5月30日", sex: "女", addres: "沈阳市和平区"},
+					{id: "7", name: "大兵7", date: "2016年5月1日", sex: "男", addres: "沈阳市和平区"},
+					{id: "8", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "9", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "10", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "11", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "12", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "13", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "14", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "15", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "16", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "17", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "18", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "19", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "20", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "21", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "22", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "23", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "24", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "25", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "26", name: "大兵9", date: "2016年5月3日", sex: "男", addres: "沈阳市和平区"}
+					
+				]
+			
+				,	editurl : "/a/b",	rowNum : 10,	rownumbers : true,	multiselect : true,				onSelectRow : testTableSelectRow,					colModel: [
+                						{
+					name:"id",					label:"序号",					key:true,										width:100,																																			editable:false,
+										sortable:false,
+										align:"left",
+					fixed:false,
+					hidden:true,
+					resizable:true		
+				}
+		        		,				{
+					name:"name",					label:"名称",															width:100,																																			editable:true,
+										sortable:true,
+										align:"left",
+					fixed:false,
+					hidden:false,
+					resizable:true		
+				}
+		        		,				{
+					name:"date",					label:"日期",															width:100,																																			editable:true,
+										sortable:true,
+										align:"left",
+					fixed:false,
+					hidden:false,
+					resizable:true		
+				}
+		        		,				{
+					name:"sex",					label:"性别",															width:100,																																			editable:true,
+										sortable:true,
+										align:"left",
+					fixed:false,
+					hidden:false,
+					resizable:true		
+				}
+		        		,				{
+					name:"addres",					label:"地址",															width:100,																																			editable:true,
+										sortable:true,
+										align:"left",
+					fixed:false,
+					hidden:false,
+					resizable:true		
+				}
+		        		,				{
+										label:"操作",															width:100,					formatter:testFormater,																														editable:false,
+										sortable:false,
+										align:"left",
+					fixed:false,
+					hidden:false,
+					resizable:true		
+				}
+		    ],
+    ajaxSelectOptions:{type : "POST"},
+    editrules:{
+    																		},
+        subGrid : true,
+	subGridRowExpanded : function(parentid, rowid) {
+			//console.log(parentid+","+rowid);
+			var subtableId = 'tabledemo1_'+parentid + "_subtable";
+			var subtablePagerId = subtableId + "_pager";
+			// send the parent row primary key to the server so that we know which grid to show
+			//var url = rowid + ".json";
+			// url = url + "&parentRowID=" + encodeURIComponent(rowid)
+			// add a table and pager HTML elements to the parent grid row - we will render the child grid here
+			$('#' + parentid).append('<table id=' + subtableId + '></table><div id=' + subtablePagerId + '></div>');
+			ui.table(subtableId).init({
+				postData:{parentRowid:rowid},
+								data : 
+			
+				[
+					{id: "1", name: "大兵1", date: "2016年5月25日", sex: "男", addres: "沈阳市和平区"},
+					{id: "2", name: "大兵2", date: "2016年5月26日", sex: "女", addres: "沈阳市和平区"},
+					{id: "3", name: "大兵3", date: "2016年5月27日", sex: "男", addres: "沈阳市和平区"},
+					{id: "4", name: "大兵4", date: "2016年5月28日", sex: "女", addres: "沈阳市和平区"},
+					{id: "5", name: "大兵5", date: "2016年5月29日", sex: "男", addres: "沈阳市和平区"},
+					{id: "6", name: "大兵6", date: "2016年5月30日", sex: "女", addres: "沈阳市和平区"},
+					{id: "7", name: "大兵7", date: "2016年5月1日", sex: "男", addres: "沈阳市和平区"},
+					{id: "8", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "9", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "10", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "11", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "12", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "13", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "14", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "15", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "16", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "17", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "18", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "19", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "20", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "21", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "22", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "23", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "24", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "25", name: "大兵8", date: "2016年5月2日", sex: "女", addres: "沈阳市和平区"},
+					{id: "26", name: "大兵9", date: "2016年5月3日", sex: "男", addres: "沈阳市和平区"}
+					
+				]
+			
+				,				editurl : "/sub/a/b",				rowNum : 10,												height : "300",				scroll : true,				onSelectRow : testSubTableSelectRow,												colModel: [
+			        			        									{
+							   name : "id", 							   label : "序号", 							   key : true, 							  							   width : 100, 							  							  							  							  							  							  							  							  editable: false,
+							  							  sortable: false,
+							  							  align: "left",
+							  fixed: false,
+							  hidden: true,
+							  resizable: true				   
+							}
+								        		,							{
+							   name : "name", 							   label : "名称", 							  							  							   width : 100, 							  							  							  							  							  							  							  							  editable: true,
+							  							  sortable: true,
+							  							  align: "left",
+							  fixed: false,
+							  hidden: false,
+							  resizable: true				   
+							}
+								        		,							{
+							   name : "date", 							   label : "日期", 							  							  							   width : 100, 							  							  							  							  							  							  							  							  editable: true,
+							  							  sortable: true,
+							  							  align: "left",
+							  fixed: false,
+							  hidden: false,
+							  resizable: true				   
+							}
+								        		,							{
+							   name : "sex", 							   label : "性别", 							  							  							   width : 100, 							  							  							  							  							  							  							  							  editable: true,
+							  							  sortable: true,
+							  							  align: "left",
+							  fixed: false,
+							  hidden: false,
+							  resizable: true				   
+							}
+								        		,							{
+							   name : "addres", 							   label : "地址", 							  							  							   width : 100, 							  							  							  							  							  							  							  							  editable: true,
+							  							  sortable: true,
+							  							  align: "left",
+							  fixed: false,
+							  hidden: false,
+							  resizable: true				   
+							}
+								    ],
+			    ajaxSelectOptions:{type : "POST"},
+			    editrules:{
+			    																																													},
+			    			    datatype:"local",
+			    loadonce: true			});
+		},
+        pager: '#table_pager_tabledemo1',    datatype:"local",
+    loadonce: true});
+$('#addrow').tooltip();ui.button("addrow").bind("click",addrow);
+
+$('#removerow').tooltip();ui.button("removerow").bind("click",removerow);
+
+$('#editrow').tooltip();ui.button("editrow").bind("click",editrow);
+
+$('#saverow').tooltip();ui.button("saverow").bind("click",saverow);
+
+$('#restorerow').tooltip();ui.button("restorerow").bind("click",restorerow);
+
+ui.button("showbtn").bind("click",showit);
+
+ui.button("contentbtn").bind("click",showFirstTab);
+
+ui.button("disbtn").bind("click",disableit);
+
+ui.button("enabtn").bind("click",enableit);
+
+ui.button("lablebtn").bind("click",setlable);
+
+ui.button("contentbtn").bind("click",setcontent);
+
+ui.tabs("tab1").bind("hide",onhide);
+ui.tabs("tab1").bind("shown",onshown);
+ui.tabs("tab1").bind("hidden",onhidden);
+ui.tabs("tab1").bind("show",onshow);
+
+ui.form("form-default").init();
+ui.date("birthday1").init({format:"YYYY-MM-DD"});
+
+ui.date("time1").init({format:"hh:mm:ss"});
+
+ui.radio("sex_male").init({});
+
+ui.radio("sex_female").init({});
+
+ui.radio("sex_other").init({});
+
+ui.select("city1").init({ placeholder:'请选择所在城市',});
+
+ui.button("btn_reset").bind("click",reset);
+
+ui.button("btn_20").bind("click",update20);
+
+ui.button("btn_50").bind("click",update50);
+
+ui.button("btn_70").bind("click",update70);
+
+ui.button("btn_finish").bind("click",finish);
+
+ui.button("btn_setlable").bind("click",setLable);
+
+ui.button("btn_p1").bind("click",p1update10);
+
+ui.button("btn_p2").bind("click",p2update10);
+
+ui.button("btn_p3").bind("click",p3update10);
+
+ui.button("btn_p4").bind("click",p4update10);
+
+ui.button("btn_pt").bind("click",ptop);
+
+ui.button("btn_pt2").bind("click",ptop2);
+
+ui.button("Alert-Demo").bind("click",alert_demo);
+
+ui.button("Confirm-Demo").bind("click",confirm_demo);
+
+ui.button("Dialog-Demo").bind("click",dialog_demo);
+
+ui.button("Success-Demo").bind("click",toastr_success_Demo);
+
+ui.button("Info_Demo").bind("click",toastr_info_Demo);
+
+ui.button("Warn_Demo").bind("click",toastr_warn_Demo);
+
+ui.button("Error_Demo").bind("click",toastr_error_Demo);
+
+ui.image("image1").init({ original:'http://imgstore.cdn.sogou.com/app/a/100540002/714860.jpg',});
+
+ui.form("form-default").init();
+
+ui.search("search-demo").init(
+		new Bloodhound({
+			datumTokenizer: function(d) { 
+				return Bloodhound.tokenizers.whitespace(d.value);
+			},
+			queryTokenizer: Bloodhound.tokenizers.whitespace,
+							local: 
+								
+									[
+										{ avatar: '/img/img.png', title:'1000000000', addon: '扩展字段', value: '值值', label: 'label0' },
+									 	{ avatar: '/img/img.png', title:'4354331', addon: '扩展字段2', value: '值值2', label: 'label2' },
+									 	{ avatar: '/img/img.png', title:'asd55', addon: '扩展字段3', value: '值值3', label: 'label3' },
+									 	{ avatar: '/img/img.png', title:'wew234', addon: '扩展字段4', value: '值值4', label: 'label4' }
+									]
+								
+							
+									})
+);
+
+
+ui.datepaginator("paginatordemo").init({
+	 size: 'large',	 startDate: '2016-01-01',	 endDate: '2018-01-01',		 Format: 'YYYY-MM-DD',	 offDays: [{dates:['2016-01-05'
+,'2016-01-08'
+], format:'YYYY-MM-DD', disable: false}]});
+ui.datepaginator("paginatordemo").bind("selectedDateChanged",handleOnSelectedDateChanged);
+
+						})();
+	})();
+});
+</script>
+</html>
